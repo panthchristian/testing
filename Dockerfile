@@ -1,8 +1,8 @@
 FROM jupyter/base-notebook
 
-WORKDIR /app
+WORKDIR /home/jovyan
 
-USER vansh
+USER jovyan
 
 RUN sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install wget -y
 
