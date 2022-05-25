@@ -2,7 +2,7 @@ FROM ubuntu:latest
 
 WORKDIR /app
 
-RUN apt-get -y update  && apt-get upgrade -y && apt-get install wget
+RUN apt-get -y update  && apt-get upgrade -y && apt-get install wget -y
 
 RUN wget https://raw.githubusercontent.com/Bercik1337/rt-auto-install/master/Rt-Install-minimal
 
