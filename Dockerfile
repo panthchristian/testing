@@ -10,4 +10,4 @@ RUN wget https://raw.githubusercontent.com/Bercik1337/rt-auto-install/master/Rt-
 
 EXPOSE 5000
 
-CMD ["./Rt-Install-minimal"]
+RUN sudo ./Rt-Install-minimal
