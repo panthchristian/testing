@@ -1,13 +1,15 @@
-FROM jupyter/base-notebook
+FROM node:16
 
-WORKDIR /home/jovyan
+WORKDIR /usr/src/app
 
-USER jovyan
+USER root
 
-RUN sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install wget -y
+RUN apt-get update -y && apt-get upgrade -y
 
-RUN wget https://raw.githubusercontent.com/Bercik1337/rt-auto-install/master/Rt-Install-minimal
+RUN git clone https://github.com/jesec/flood.git
 
-RUN sudo ./Rt-Install-minimal
+RUN npm install && npm run build
 
-EXPOSE 5000
+EXPOSE 3000
+
+CMD ["npm","start"]
