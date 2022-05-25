@@ -1,8 +1,8 @@
-FROM ubuntu:latest
+FROM jupyter/base-notebook
 
 WORKDIR /app
 
-USER root
+USER vansh
 
 RUN sudo apt-get update -y && sudo apt-get upgrade -y && sudo apt-get install wget -y
 
