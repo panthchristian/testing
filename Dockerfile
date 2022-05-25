@@ -6,8 +6,8 @@ USER root
 
 RUN apt-get update -y && apt-get upgrade -y
 
-RUN git clone https://github.com/jesec/flood.git && npm install && npm run build
+RUN npm install --global flood
 
 EXPOSE 3000
 
-CMD ["npm","start"]
+CMD ["flood"]
