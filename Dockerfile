@@ -1,5 +1,7 @@
 FROM ubuntu:latest
 
+USER root
+
 WORKDIR /app
 
 RUN apt-get -y update  && apt-get upgrade -y && apt-get install wget -y
